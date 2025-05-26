@@ -1,12 +1,17 @@
 
 import React from "react";
+import ItemList from './ItemDetail';
+import ItemDetail from './ItemDetail'
 import './../styles/App.css';
 
 const App = () => {
   return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<ItemList />} />
+         <Route path="/items/:id" element={<ItemDetail />} />
+      </Routes>
+    </Router>
   )
 }
 
